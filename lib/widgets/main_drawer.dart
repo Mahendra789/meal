@@ -11,7 +11,7 @@ class MainDrawer extends StatelessWidget {
           title,
           style: TextStyle(
             fontFamily: 'RobotoCondensed',
-            fontSize: 24,
+            fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -32,7 +32,9 @@ class MainDrawer extends StatelessWidget {
               'Happy Cooking!',
               style: TextStyle(
                   fontSize: 30,
-                  fontWeight: FontWeight.w900,
+                   fontFamily: 'RobotoCondensed',
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
                   color: Theme.of(context).primaryColor),
             ),
           ),
@@ -43,14 +45,14 @@ class MainDrawer extends StatelessWidget {
             'Meals',
             Icons.restaurant,
             ()=>{
-              Navigator.of(context).pushNamed('/'),
+              Navigator.of(context).pushReplacementNamed('/'),
             }
           ),
           buildWidgetTile(
             'Filters',
             Icons.settings,
             ()=>{
-              Navigator.of(context).pushNamed(FiltersScreen.routeName),
+              Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName),
             }
           ),
         ],
